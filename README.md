@@ -54,7 +54,7 @@ $ ./wm sign.bmp -text "hello" -color 243E7C -pos 120,75
 ```
 Figure 1: Original Sign.
 ```
-<img src="https://raw.githubusercontent.com/mirzemehdi/BMPWatermark/master/sign.bmp" align="center" alt="originalSign" height="50%" width="50%"  >
+<img src="https://raw.githubusercontent.com/mirzemehdi/BMPWatermark/master/sign.bmp" alt="originalSign" height="50%" width="50%"  >
 
 It is signed with a color #243E7B. Then, it is watermarked the file mod-
 sign.bmp with the text ”hello” written in morse code in the position 120,75 from
@@ -63,6 +63,8 @@ the top left of the image with the color #243E7C. The result is:
 ```
 Figure 2: Watermarked Sign.
 ```
+<img src="https://raw.githubusercontent.com/mirzemehdi/BMPWatermark/master/modsign.bmp" alt="modSign" height="50%" width="50%"  >
+
 The watermark is not recognizable by the human eye. To see where it
 changed you can search for the color #243E7C.
 
