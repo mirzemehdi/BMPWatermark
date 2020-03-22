@@ -25,7 +25,7 @@ $ ./wm sign.bmp -text "Hello" -date -color FFFFFE -pos 10,
 -o modsign.bmp
 
 *the values of the text, color, position and the name of the input and output
-files are defined by the user.
+*files are defined by the user.
 
 ### 2.1 How it works?
 
