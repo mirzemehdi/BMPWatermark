@@ -9,11 +9,11 @@ it on a new document, so digital signatures are no longer valid. The purpose
 of this project is to watermark the given BMP image. A digital watermark is
 a kind of marker covertly embedded in a noise-tolerant signal such as audio,
 video or image data. It is typically used to identify ownership of the copyright
-of such signal.”Watermarking”is the process of hiding digital information onto
+of such signal.”Watermarking” is the process of hiding digital information onto
 an carrier signal; the hidden information should contain a relationship to the
 carrier signal, but not necessarily. As mentioned above, this project works with
 BMP images and it operates in such a way that the image can be watermarked
-with the given text and the current date, converted intoMorse code, in a
+with the given text and the current date, converted into Morse code, in a
 position and color the user wants.
 
 ## 2 Usage
@@ -21,7 +21,7 @@ position and color the user wants.
 The program is called "wm" for ”watermark”. To execute it the command line
 should be written in the following way:
 
-$ ./wm sign.bmp -text "Hello" -date -color FFFFFE -pos 10,
+$ ./wm sign.bmp -text "Hello" -date -color FFFFFE -pos 10,20
 -o modsign.bmp
 
 *the values of the text, color, position and the name of the input and output
@@ -31,13 +31,13 @@ files are defined by the user.*
 
 When executing the program that way it will create a new BMP image called
 modsign.bmp where on position 10,20 from the top left of the image, will write
-”Hello” followed by current date (the output of thedatelinux command) in
-Morse codewhere a dot is a pixel of color FFFFFE (nearly white), and a dash
+”Hello” followed by current date (the output of the date linux command) in
+Morse code where a dot is a pixel of color FFFFFE (nearly white), and a dash
 is a “line” made of 3 pixels. Space between dots and dashes is one background
 pixel. Space between letters is 3 pixels, space between 2 words is 5 pixels. If
 the resolution is high, pixels will be really small, and the line will be quite
 invisible.It can be found only by the people who know it is there. If the line is
-too long to fit in the image,it will continue on the next line. If the signature is
+too long to fit in the image, it will continue on the next line. If the signature is
 watermarked by writing the name of the document and the date in Morse code
 in it, and someone makes a digital copy of the signature and uses it on another
 document, later it can be proved that the signature is not the right one because
@@ -80,7 +80,7 @@ $ ./wm sign.bmp -text "Hello" -date -color FFFFFE -pos 10,20
 
 ### -text
 
-*Takes the value of the text and writes it in theMorse code.*
+*Takes the value of the text and writes it in the Morse code.*
 *It is optional. If there is no text option, then no text is being written.*
 
 ### -date
@@ -101,7 +101,7 @@ the white background of the image.*
 
 ### -pos
 
-*It writes theMorse codeat position x,y starting from thetop left of the image.
+*It writes the Morse codeat position x,y starting from thetop left of the image.
 If -pos is not present it writes from the top left position of the image (0,0).*
 
 ### -o modsign.bmp
@@ -117,14 +117,14 @@ output on the standard output. The name of the output file must be written by th
 - Some characters are not supported by theMorse code. Supported characters are letters from A-Z or a-z, numbers from
 0-9, ”+” and ”:”. In all other text inputs it will give an error
 
-### message.
+### Message:
 
 - The image file should be given in BMP format. In other case it will give an error message.
 - If the position is not given in a range of possible values for x,y 
-  an error will appear. The value for thexshould be less than width and value of y 
-  should be less thanheight of the BMPimage.
+  an error will appear. The value for the x should be less than width and value of y 
+  should be less than height of the BMPimage.
 
-### References
+## References
 
 *https://en.wikipedia.org/wiki/Digital_watermarking*
 
@@ -132,9 +132,7 @@ output on the standard output. The name of the output file must be written by th
 
 *https://en.wikipedia.org/wiki/Endianness*
 
-*https://en.wikipedia.org/wiki/Digital_watermarking*
 
-*[http://ascii-table.com/morse-code.php](http://ascii-table.com/morse-code.php)*
 
 
 
