@@ -122,7 +122,11 @@ output on the standard output. The name of the output file must be written by th
 - The image file should be given in BMP format. In other case it will give an error message.
 - If the position is not given in a range of possible values for x,y 
   an error will appear. The value for the x should be less than width and value of y 
-  should be less than height of the BMPimage.
+  should be less than height of the BMPimage.  
+ 
+## Authors
+
+----Developed by ***Mirzamehdi Karimov*** and ***Nigar Yusifzada*** ---- 
 
 ## References
 
