@@ -41,6 +41,411 @@ too long to fit in the image,it will continue on the next line. If the signature
 watermarked by writing the name of the document and the date in Morse code
 in it, and someone makes a digital copy of the signature and uses it on another
 document, later it can be proved that the signature is not the right one because
-the name of the document and the date will be wrong.
+the name of the document and the date will be wrong.  
+
+## 3 Example
+
+It is given the example of the watermarking the sign below. If we run the
+program with the following command line:
+
+$ ./wm sign.bmp -text "hel## 3 Example
+
+It is given the example of the watermarking the sign below. If we run the
+program with the following command line:
+
+$ ./wm sign.bmp -text "hello" -color 243E7C -pos 120,
+-o modsign.bmp
+
+```
+Figure 1: Original Sign.
+```
+It is signed with a color #243E7B. Then, it is watermarked the file mod-
+sign.bmp with the text ”hello” written in morse code in the position 120,75 from
+the top left of the image with the color #243E7C. The result is:
+
+```
+Figure 2: Watermarked Sign.
+```
+The watermark is not recognizable by the human eye. To see where it
+changed you can search for the color #243E7C.
+
+
+## 4 Command line options
+
+Analyzing the command line:
+
+$ ./wm sign.bmp -text "Hello" -date -color FFFFFE -pos 10,
+-o modsign.bmp
+
+sign.bmpis the name of the file which is being modified.
+
+### -text
+
+### Takes the value of the text and writes it in theMorse code.
+
+### It is optional. If there is no text option, then no text is being written.
+
+### -date
+
+### It writes inMorse codethe output of system command date
+
+### after the text (if option -text is present).The -date is optional. If
+
+### there is no date option, then no date is being written.
+
+### *If neither text nor date options are given, then nothing will be
+
+### changed in new BMP file. So the one of these options must be given
+
+### by the user in order to watermark the file.
+
+### -color
+
+### It gives the color to the watermark of the image. It is
+
+### obligatory to give a color to the watermark. Here it is given the
+
+### #FFFFFE color (which is nearly white) to hide the watermark in
+
+### the white background of the image.
+
+### -pos
+
+### It writes theMorse codeat position x,y starting from the
+
+### top left of the image. If -pos is not present it writes from the top
+
+### left position of the image (0,0).
+
+### -o modsign.bmp
+
+### Writes the output (-o) in file modsign.bmp. If no -o op-
+
+### tion is mentioned, output on the standard output. The name of the
+
+### output file must be written by the user.
+
+
+## 5 Possible errors
+
+### The list of possible errors of the program:
+
+- Some characters are not supported by theMorse code. Sup-
+
+### ported characters are letters from A-Z or a-z, numbers from
+
+### 0-9, ”+” and ”:”. In all other text inputs it will give an error
+
+### message.
+
+- The image file should be given in BMP format. In other case
+
+### it will give an error message.
+
+- If the position is not given in a range of possible values for x,y
+
+### an error will appear. The value for thexshould be less than
+
+### width and value ofy should be less thanheight of the BMP
+
+### image.
+
+References
+## 3 Example
+
+It is given the example of the watermarking the sign below. If we run the
+program with the following command line:
+
+$ ./wm sign.bmp -text "hello" -color 243E7C -pos 120,
+-o modsign.bmp
+
+```
+Figure 1: Original Sign.
+```
+It is signed with a color #243E7B. Then, it is watermarked the file mod-
+sign.bmp with the text ”hello” written in morse code in the position 120,75 from
+the top left of the image with the color #243E7C. The result is:
+
+```
+Figure 2: Watermarked Sign.
+```
+The watermark is not recognizable by the human eye. To see where it
+changed you can search for the color #243E7C.
+
+
+## 4 Command line options
+
+Analyzing the command line:
+
+$ ./wm sign.bmp -text "Hello" -date -color FFFFFE -pos 10,
+-o modsign.bmp
+
+sign.bmpis the name of the file which is being modified.
+
+### -text
+
+### Takes the value of the text and writes it in theMorse code.
+
+### It is optional. If there is no text option, then no text is being written.
+
+### -date
+
+### It writes inMorse codethe output of system command date
+
+### after the text (if option -text is present).The -date is optional. If
+
+### there is no date option, then no date is being written.
+
+### *If neither text nor date options are given, then nothing will be
+
+### changed in new BMP file. So the one of these options must be given
+
+### by the user in order to watermark the file.
+
+### -color
+
+### It gives the color to the watermark of the image. It is
+
+### obligatory to give a color to the watermark. Here it is given the
+
+### #FFFFFE color (which is nearly white) to hide the watermark in
+
+### the white background of the image.
+
+### -pos
+
+### It writes theMorse codeat position x,y starting from the
+
+### top left of the image. If -pos is not present it writes from the top
+
+### left position of the image (0,0).
+
+### -o modsign.bmp
+
+### Writes the output (-o) in file modsign.bmp. If no -o op-
+
+### tion is mentioned, output on the standard output. The name of the
+
+### output file must be written by the user.
+
+
+## 5 Possible errors
+
+### The list of possible errors of the program:
+
+- Some characters are not supported by theMorse code. Sup-
+
+### ported characters are letters from A-Z or a-z, numbers from
+
+### 0-9, ”+” and ”:”. In all other text inputs it will give an error
+
+### message.
+
+- The image file should be given in BMP format. In other case
+
+### it will give an error message.
+
+- If the position is not given in a range of possible values for x,y
+
+### an error will appear. The value for thexshould be less than
+
+### width and value ofy should be less thanheight of the BMP
+
+### image.
+
+References
+## 3 Example
+
+It is given the example of the watermarking the sign below. If we run the
+program with the following command line:
+
+$ ./wm sign.bmp -text "hello" -color 243E7C -pos 120,
+-o modsign.bmp
+
+```
+Figure 1: Original Sign.
+```
+It is signed with a color #243E7B. Then, it is watermarked the file mod-
+sign.bmp with the text ”hello” written in morse code in the position 120,75 from
+the top left of the image with the color #243E7C. The result is:
+
+```
+Figure 2: Watermarked Sign.
+```
+The watermark is not recognizable by the human eye. To see where it
+changed you can search for the color #243E7C.
+
+
+## 4 Command line options
+
+Analyzing the command line:
+
+$ ./wm sign.bmp -text "Hello" -date -color FFFFFE -pos 10,
+-o modsign.bmp
+
+sign.bmpis the name of the file which is being modified.
+
+### -text
+
+### Takes the value of the text and writes it in theMorse code.
+
+### It is optional. If there is no text option, then no text is being written.
+
+### -date
+
+### It writes inMorse codethe output of system command date
+
+### after the text (if option -text is present).The -date is optional. If
+
+### there is no date option, then no date is being written.
+
+### *If neither text nor date options are given, then nothing will be
+
+### changed in new BMP file. So the one of these options must be given
+
+### by the user in order to watermark the file.
+
+### -color
+
+### It gives the color to the watermark of the image. It is
+
+### obligatory to give a color to the watermark. Here it is given the
+
+### #FFFFFE color (which is nearly white) to hide the watermark in
+
+### the white background of the image.
+
+### -pos
+
+### It writes theMorse codeat position x,y starting from the
+
+### top left of the image. If -pos is not present it writes from the top
+
+### left position of the image (0,0).
+
+### -o modsign.bmp
+
+### Writes the output (-o) in file modsign.bmp. If no -o op-
+
+### tion is mentioned, output on the standard output. The name of the
+
+### output file must be written by the user.
+
+
+## 5 Possible errors
+
+### The list of possible errors of the program:
+
+- Some characters are not supported by theMorse code. Sup-
+
+### ported characters are letters from A-Z or a-z, numbers from
+
+### 0-9, ”+” and ”:”. In all other text inputs it will give an error
+
+### message.
+
+- The image file should be given in BMP format. In other case
+
+### it will give an error message.
+
+- If the position is not given in a range of possible values for x,y
+
+### an error will appear. The value for thexshould be less than
+
+### width and value ofy should be less thanheight of the BMP
+
+### image.
+
+References
+## 3 Example
+
+It is given the example of the watermarking the sign below. If we run the
+program with the following command line:
+
+$ ./wm sign.bmp -text "hello" -color 243E7C -pos 120,
+-o modsign.bmp
+
+```
+Figure 1: Original Sign.
+```
+It is signed with a color #243E7B. Then, it is watermarked the file mod-
+sign.bmp with the text ”hello” written in morse code in the position 120,75 from
+the top left of the image with the color #243E7C. The result is:
+
+```
+Figure 2: Watermarked Sign.
+```
+The watermark is not recognizable by the human eye. To see where it
+changed you can search for the color #243E7C.
+
+
+## 4 Command line options
+
+Analyzing the command line:
+
+$ ./wm sign.bmp -text "Hello" -date -color FFFFFE -pos 10,
+-o modsign.bmp
+
+sign.bmp is the name of the file which is being modified.
+
+### -text
+
+*Takes the value of the text and writes it in theMorse code.*
+*It is optional. If there is no text option, then no text is being written.*
+
+### -date
+
+*It writes inMorse codethe output of system command date 
+after the text (if option -text is present).The -date is optional.
+If there is no date option, then no date is being written.
+If neither text nor date options are given, then nothing will be 
+changed in new BMP file. So the one of these options must be given 
+by the user in order to watermark the file.*
+
+### -color
+
+*It gives the color to the watermark of the image. 
+It is obligatory to give a color to the watermark. Here it is given the
+#FFFFFE color (which is nearly white) to hide the watermark in
+the white background of the image.*
+
+### -pos
+
+*It writes theMorse codeat position x,y starting from thetop left of the image.
+If -pos is not present it writes from the top left position of the image (0,0).*
+
+### -o modsign.bmp
+
+*Writes the output (-o) in file modsign.bmp. If no -o option is mentioned, 
+output on the standard output. The name of the output file must be written by the user.*
+
+
+## 5 Possible errors
+
+### The list of possible errors of the program:
+
+- Some characters are not supported by theMorse code. Supported characters are letters from A-Z or a-z, numbers from
+0-9, ”+” and ”:”. In all other text inputs it will give an error
+
+### message.
+
+- The image file should be given in BMP format. In other case it will give an error message.
+- If the position is not given in a range of possible values for x,y 
+  an error will appear. The value for thexshould be less than width and value of y 
+  should be less thanheight of the BMPimage.
+
+### References
+
+*https://en.wikipedia.org/wiki/Digital_watermarking*
+
+*[http://ascii-table.com/morse-code.php](http://ascii-table.com/morse-code.php)*
+
+*https://en.wikipedia.org/wiki/Endianness*
+
+*https://en.wikipedia.org/wiki/Digital_watermarking*
+
+*[http://ascii-table.com/morse-code.php](http://ascii-table.com/morse-code.php)*
+
+
 
 
