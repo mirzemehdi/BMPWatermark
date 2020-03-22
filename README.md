@@ -18,7 +18,7 @@ position and color the user wants.
 
 ## 2 Usage
 
-The program is calledwmfor ”watermark”. To execute it the command line
+The program is called "wm" for ”watermark”. To execute it the command line
 should be written in the following way:
 
 $ ./wm sign.bmp -text "Hello" -date -color FFFFFE -pos 10,
